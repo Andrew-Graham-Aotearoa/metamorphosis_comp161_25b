@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Metamorphosis Project: Compx-161-25B, Andrew Graham | 1685046  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="html">
+    <meta name="description" content="Interactive Elements">
+    <meta name="author" content="Andrew Graham">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,50..125,100..900;1,50..125,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Saira:ital,wdth,wght@0,50..125,100..900;1,50..125,100..900&display=swap"
+        rel="stylesheet">
+    <title>Interaction, Animation</title>
+
+    <!-- Automated Sidenav    -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").classList.add("open");
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").classList.remove("open");
+        }
+    </script>
+</head>
+
+<body class="animation">
+    <!-- Sidenav Hamburger and Menu-->
+    <div class="hamburger-menu" onclick="openNav()">&#9776; Menu</div>
+    <!--menu section-->
+    <div id="mySidenav" class="sidenav">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <a href="../index.html">Home</a>
+        <a href="metamorphosis-contents.html">Contents</a>
+        <a href="metamorphosis_about.html">About</a>
+        <a href="metamorphosis_process-journal.html">Journal</a>
+        <a href="metamorphosis_Part_01.html">Part 01</a>
+        <a href="metamorphosis_Part_02.html">Part 02</a>
+        <a href="metamorphosis_Part_03.html">Part 03</a>
+        <a href="interaction.html" class="active">Animate</a>
+    </div>
+
+    <h1 id="h1animation" class="hiddenh1">Metamorphosis</h1>
+
+    <h2>Who is Gregor Samsa?</h2>
+    <p>In the interests of discovering who exactly Gregor is...</p>
+    <p>110 years after Franz Kafka wrote the Metamophosis</p>
+
+    <img class="man-head" src="assets-interactive/bug-man/06-man-head.png" alt="Man-Head">
+    <img class="man-limbs" src="assets-interactive/bug-man/04-man-limbs.png" alt="Man-Limbs">
+    <img class="man-body" src="assets-interactive/bug-man/05-man-body.png" alt="Man-Body">
+    <img class="bug-head" src="assets-interactive/bug-man/03-bug-head.png" alt="Bug-Head">
+    <img class="bug-body" src="assets-interactive/bug-man/02-bug-body.png" alt="Bug-Body">
+    <img class="bug-legs" src="assets-interactive/bug-man/01-bug-legs.png" alt="Bug-legs">
+
+    <!-- Radio Buttons -->
+    <form id="bug-man">
+        <p>It's best that the reader decides. <br><br>
+            Which parts of Gregor are Bug and which parts are Man?</p>
+        <h2>Head</h2>
+        <input type="radio" id="bug-head" name="head" value="Bug-Head">
+        <label for="bug-head">Bug</label><br>
+        <input type="radio" id="man-head" name="head" value="Man-Head">
+        <label for="man-head">Man</label>
+        <br>
+        <h2>Body</h2>
+        <input type="radio" id="bug-body" name="body" value="Bug-Body">
+        <label for="bug-body">Bug</label><br>
+        <input type="radio" id="man-body" name="body" value="Man-Body">
+        <label for="man-body">Man</label>
+        <br>
+        <h2>Limbs</h2>
+        <input type="radio" id="bug-legs" name="limbs" value="Bug-Legs">
+        <label for="bug-legs">Bug</label><br>
+        <input type="radio" id="man-limbs" name="limbs" value="Man-Limbs">
+        <label for="man-limbs">Man</label>
+        <br>
+
+    </form>
+    <!-- JavaScript animates Gregor -->
+    <button onclick="see_gregor()">See Gregor</button>
+    <script>
+        function see_gregor() {
+            //Header Animation
+            console.log(document.getElementById("h1animation"));
+            console.log('script ran')
+            document.getElementById("h1animation").classList.remove('hiddenh1');
+            // document.getElementByID("h1animation").classlist.remove('showh1');
+            
+            // Head
+            if (document.getElementById("bug-head").checked) {
+                document.querySelector('.bug-head').classList.add('show');
+                document.querySelector('.man-head').classList.remove('show');
+            }
+            else if (document.getElementById("man-head").checked) {
+                document.querySelector('.man-head').classList.add('show');
+                document.querySelector('.bug-head').classList.remove('show');
+            }
+
+            // Body
+            if (document.getElementById("bug-body").checked) {
+                document.querySelector('.bug-body').classList.add('show');
+                document.querySelector('.man-body').classList.remove('show');
+            }
+            else if (document.getElementById("man-body").checked) {
+                document.querySelector('.man-body').classList.add('show');
+                document.querySelector('.bug-body').classList.remove('show');
+            }
+
+            // Limbs
+            if (document.getElementById("bug-legs").checked) {
+                document.querySelector('.bug-legs').classList.add('show');
+                document.querySelector('.man-limbs').classList.remove('show');
+            }
+            else if (document.getElementById("man-limbs").checked) {
+                document.querySelector('.man-limbs').classList.add('show');
+                document.querySelector('.bug-legs').classList.remove('show');
+            }
+        }
+    </script>
+</body>
+
+</html>

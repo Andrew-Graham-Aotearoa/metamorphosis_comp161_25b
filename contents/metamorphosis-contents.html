@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Metamorphosis Project: Compx-161-25B, Andrew Graham | 1685046  -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="html">
+    <meta name="description" content="Contents Table">
+    <meta name="author" content="Andrew Graham">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,50..125,100..900;1,50..125,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Saira:ital,wdth,wght@0,50..125,100..900;1,50..125,100..900&display=swap"
+        rel="stylesheet">
+    <title>Metamorphosis Contents</title>
+    <!-- Script for Automated Sidenav    -->
+    <script>
+        // I tried window.onload, but it did not work.
+        // window.onload = function () {
+        //     openNav();
+        // }
+        window.addEventListener('load', function () {
+            openNav();
+        });
+        function openNav() {
+            document.getElementById("mySidenav").classList.add("open");
+            console.log("Nav opened")
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").classList.remove("open");
+            console.log("Nav closed")
+        }
+    </script>
+</head>
+<body class="contentsposition">
+    <!-- Sidenav Hamburger and Menu-->
+    <div class="hamburger-menu" onclick="openNav()">&#9776; Menu</div>
+
+    <!--menu section-->
+    <div id="mySidenav" class="sidenav">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <a href="../index.html">Home</a>
+        <a href="metamorphosis-contents.html" class="active">Contents</a>
+        <a href="metamorphosis_about.html">About</a>
+        <a href="metamorphosis_process-journal.html">Journal</a>
+        <a href="metamorphosis_Part_01.html">Part 01</a>
+        <a href="metamorphosis_Part_02.html">Part 02</a>
+        <a href="metamorphosis_Part_03.html">Part 03</a>
+        <a href="interaction.html">Animate</a>
+    </div>
+    <div id="contents-img">
+        <h1><a href="../index.html">Metamorphosis</a></h1>
+        <!--Image Source:
+         https://unsplash.com/photos/white-concrete-hallway-97R0iFreH1E
+        Photo by <a href="https://unsplash.com/@niuhang?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">hang niu</a> on <a href="https://unsplash.com/photos/white-concrete-hallway-97R0iFreH1E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+           -->
+
+        <!-- I removed this content because it was redundant... there is an active menu on this page already, see process-journal/project iteration for details  -->
+        <!-- <h2>Contents</h2> -->
+        <!-- <ul id="contentsnav">
+            <li><a href="metamorphosis_part_01.html">Part 01</a></li>
+            <li><a href="metamorphosis_part_02.html">Part 02</a></li>
+            <li><a href="metamorphosis_part_03.html">Part 03</a></li>
+        </ul> -->
+    </div>
+</body>
+
+</html>
