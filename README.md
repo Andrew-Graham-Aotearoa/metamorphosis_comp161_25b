@@ -1,0 +1,3 @@
+Comp 161 in 2025 for Waikato University.
+Website Project with HTML, CSS and JavasScript built with VS Code.
+Based on Project Gutenberg's english version of Franz Kafka's Metamorphosis novel.
